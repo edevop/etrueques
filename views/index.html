@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/stylesheets/css/master.css">
+
+    <style media="screen">
+        .pre-info-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: auto;
+            background-color: #fff;
+            padding: 64px 32px;
+            box-sizing:  border-box;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.10)
+        }
+
+        .pre-info-box span.message {
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: .5px;
+            color: #7d97ad;
+        }
+
+        .bold {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0099ff;
+        }
+
+        #time-set-interval {
+            font-size: .92rem;
+            font-weight: bold;
+            color: tomato;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="pre-info-box">
+
+        <span class="message xl">
+            If you are here now it means that you are part of the
+            <br>
+            <b>coopblockchain mining farms crew.</b>
+        </span>
+        <br><br>
+        <span class="bold"> We are redirecting you to the access panel. </span>
+        <br><br>
+        <span id="time-set-interval"></span>
+
+    </div>
+
+    <script type="text/javascript">
+        let url = 'views/dashboards/auth/signin.html';
+        let res = encodeURI(url);
+        function countdown(secs, elem) {
+            const element = document.getElementById('time-set-interval');
+            element.innerHTML = 'PLEASE WAIT ' + secs + '...';
+            if ( secs < 1 ) {
+                window.location.replace(res);
+            }
+            secs --;
+            let timer = setTimeout('countdown('+secs+', "'+elem+'")', 1000);
+        }
+        countdown(10, 'status');
+    </script>
+
+</body>
+</html>

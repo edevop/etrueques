@@ -1,2 +1,2 @@
-# etrueques
-ecommerce
+# coopblockchain-dashboards
+coopblockchain dashboards

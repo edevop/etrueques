@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/stylesheets/css/master.css">
+    <style>
+    .signup { border-bottom: 1px solid #fff; }
+    #signin { background-color: #fafbfc; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="app-notification-status--panel">
+        <span data-app-notification-status> This is a distributed alfa version of the Coopblochain corp. applications </span>
+    </div>
+    <div id="header--panel" class="header--panel">
+        <div class="page-isotype">
+            <img src="/public/static/isotype.svg" alt="">
+        </div>
+    </div>
+
+    <div id="access-session-panel" class="simple-form--panel">
+        <div id="section-access-header-panel">
+            <ul>
+                <li class="signup">
+                    sign up
+                </li>
+                <li id="signin">
+                    login
+                </li>
+            </ul>
+        </div>
+        <div id="form-signup--panel">
+            <div class="form-header--hfgX">
+                Create your account
+            </div>
+            <div class="label-form-info">
+                Your student account is your portal to all things Coopblockchain: your classroom, projects, forums, career resources, and more!
+            </div>
+            <form action="">
+                <div class="input--group double">
+                    <input type="text" class="form--input" name="" placeholder="names">
+                    <input type="text" class="form--input" name="" placeholder="last names">
+                </div>
+                <div class="input--group">
+                    <input type="Email" class="form--input" name="" placeholder="Email">
+                </div>
+                <div class="input--group double">
+                    <input type="password" class="form--input" name="" placeholder="password">
+                    <input type="password" class="form--input" name="" placeholder="repeat password">
+                </div>
+                <div class="cntnt--x02a">
+                    <span>
+                        By signing in, you agree to the Coopblockchain <a href="#"> Terms of Service. </a>
+                    </span>
+                </div>
+                <div class="cntnt--x02a">
+                    <button class="form--btn"> sign up </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let signin = document.getElementById('signin') || "";
+        signin.addEventListener('click', function() {
+            window.location.replace('signin.html');
+        });
+    </script>
+</body>
+</html>

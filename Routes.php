@@ -1,8 +1,8 @@
 <?php
 
 # Setting up routes
-Route::set('about', function() {
-    echo "about us";
+Route::set('aboutus', function() {
+    aboutus::CreateView('aboutus');
 });
 
 Route::set('contact', function() {

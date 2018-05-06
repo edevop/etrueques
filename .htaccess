@@ -1,8 +1,8 @@
 #Options +MultiViews
 
-#RewriteEngine On
+RewriteEngine On
 
-#RewriteRule ^([^/]+)/? index.php?url=$1 [L, QSA]
+RewriteRule ^([^/]+)/? index.php?url=$1 [L, QSA]
 
 #RewriteCond %{ENV:HTTPS} !on
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

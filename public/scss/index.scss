@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+}
+
+body {
+    background: var(--light);
+    font-size: 16px;
+    font-family: Open Sans,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+@import "trimmed";
+@import "tools";
+
+
+/*
+*   @showlocationonsite
+*/
+#show-location-on-site {
+    width: 100%;
+    height: 500px;
+    background-image: url('../assets/robohand.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .difuminate-location-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(102,16,242,.9);
+    }
+}
+
+/** 
+*
+* @homepage
+*
+*/
+#home-page {
+    @extend .trimmed;
+    height   : auto;
+    display: grid;
+    grid-template-columns: 290px calc(100% - (290px + 250px + 64px)) 250px;
+    justify-content: space-between;
+
+    /*
+    * @sidenavmenucontrol
+    */
+    #side-nav-menu-controller {
+        height: 394px;
+        background: #fff;
+        position: sticky;
+        top: 32px;
+        @extend .border-radius;
+        @extend .box-shadow-xl;
+
+        .tag-title {
+            width: 100%;
+            height: 44px;
+            border-bottom: 1px solid var(--light);
+        }
+
+        .menu {
+            padding: 12px 0;
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                width: 100%;
+                height: 54px;
+                line-height: 54px;
+                padding: 0 16px;
+
+                &:first-of-type {
+                    background: #ddd;
+                    border-right: 5px solid #343a40;
+                }
+            }
+        }
+    }
+
+    /* 
+    *   @contenttimeline
+    */
+    #content-timeline {
+        height: 1400px;
+        background: #fff;
+        @extend .border-radius;
+        @extend .box-shadow-xl;
+    }
+
+    /*
+    *   @sideviewcontent
+    */
+    #side-view-content {
+        height: 600px;
+        background: #dc3545;
+        @extend .border-radius;
+        @extend .box-shadow-xl;
+    }
+}
+
+
+
+#subscription-stamp {
+    width: 100%;
+    height: 300px;
+    background: #6f42c1;
+}

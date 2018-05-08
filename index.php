@@ -1,7 +1,7 @@
 <?php
 
-$title = "hello";
 $actual_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 define('CSS_PATH', 'http://127.0.0.1/blogger/public/css/');
 
 
@@ -12,11 +12,11 @@ define('CSS_PATH', 'http://127.0.0.1/blogger/public/css/');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><? echo $title; ?></title>
+    <title><?php echo $actual_url; ?></title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="<?=$actual_url; ?>/public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="<?=CSS_PATH ?>index.css">
 
 </head>
 <body>
@@ -56,22 +56,51 @@ define('CSS_PATH', 'http://127.0.0.1/blogger/public/css/');
                 </div>
                 <div class="menu">
                     <ul>
-                        <li>Todo</li>
-                        <li>Ciencia</li>
-                        <li>Tecnologia</li>
-                        <li>Video Juegos</li>
-                        <li>Tendencias</li>
-                        <li>Empleos</li>
+                        <li>
+                            <i class="timeline"></i>    
+                            Todo
+                        </li>
+                        <li>
+                            <i class="store"></i>    
+                            Market
+                        </li>
+                        <li>
+                            <i class="science"></i>     
+                            Ciencia
+                        </li>
+                        <li>
+                            <i class="tech"></i>
+                            Tecnologia
+                        </li>
+                        <li>
+                            <i class="games"></i>
+                            Video Juegos
+                        </li>
+                        <li>
+                            <i class="trend"></i>
+                            Tendencias
+                        </li>
+                        <li>
+                            <i class="jobs"></i>   
+                            Empleos
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div id="content-timeline">
-            
+                <div class="navigation-switcher"></div>
+                <div class="content">
+                    <div class="box-data-tech">
+                        <div class="difuminate-tech"></div>
+                    </div>
+                </div>
             </div>
 
             <div id="side-view-content">
-            
+                <div id="discord">
+                    <div class="blur-disc"></div>
+                </div>
             </div>
 
         </section><!-- END home_page -->
@@ -79,7 +108,6 @@ define('CSS_PATH', 'http://127.0.0.1/blogger/public/css/');
     </div>
 
     <div id="subscription-stamp">
-
     </div>
 
 

@@ -1,4 +1,44 @@
-.trimmed {
-    margin: 44px auto;
-    width : 1200px;
+@media screen and ( min-width: 720px ) {
+    .trimmed {
+        padding: 32px 16px;
+        width  : 100%;
+    }
+
+    #home-page {
+        grid-template-columns: calc(100% - (250px + 64px));
+    }
+
+    #side-nav-menu-controller {
+        height: 100vh;
+        width : 290px;
+        position: fixed;
+        left: 0;
+        top : 0;
+    }
 }
+
+
+@media screen and ( min-width: 1366px ) {
+    .trimmed {
+        margin: 44px auto;
+        width : 1200px;
+    }
+}
+
+
+@media screen and ( min-width: 1400px ) {
+    .trimmed {
+        margin: 44px auto;
+        width : 1260px;
+    }
+}
+
+
+@media screen and ( min-width: 1920px ) {
+    .trimmed {
+        margin: 44px auto;
+        width : 1440px;
+    }
+}
+
+

@@ -40,9 +40,33 @@ body {
   font-family: Open Sans,sans-serif;
   -webkit-font-smoothing: antialiased; }
 
-#home-page, .trimmed {
-  margin: 44px auto;
-  width: 1200px; }
+@media screen and (min-width: 720px) {
+  #home-page, .trimmed {
+    padding: 32px 16px;
+    width: 100%; }
+  #home-page {
+    grid-template-columns: calc(100% - (250px + 64px)); }
+  #side-nav-menu-controller {
+    height: 100vh;
+    width: 290px;
+    position: fixed;
+    left: 0;
+    top: 0; } }
+
+@media screen and (min-width: 1366px) {
+  #home-page, .trimmed {
+    margin: 44px auto;
+    width: 1200px; } }
+
+@media screen and (min-width: 1400px) {
+  #home-page, .trimmed {
+    margin: 44px auto;
+    width: 1260px; } }
+
+@media screen and (min-width: 1920px) {
+  #home-page, .trimmed {
+    margin: 44px auto;
+    width: 1440px; } }
 
 .modal-screen-background {
   width: 100%;
@@ -54,11 +78,11 @@ body {
   z-index: 99;
   display: none; }
 
-#home-page #content-timeline, #home-page #side-nav-menu-controller, #home-page #side-view-content, .box-shadow-xl {
+#header-app, #home-page #content-timeline, #home-page #side-nav-menu-controller, .box-shadow-xl {
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.05);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.05); }
 
-#home-page #content-timeline, #home-page #side-nav-menu-controller, #home-page #side-view-content, .border-radius {
+#home-page #content-timeline, #home-page #side-nav-menu-controller, .border-radius {
   border-radius: 4px; }
 
 #show-location-on-site {
@@ -77,6 +101,29 @@ body {
   left: 0;
   background: rgba(102, 16, 242, 0.9); }
 
+.box-data-tech {
+  width: 300px;
+  height: 300px;
+  background-image: url(../assets/robohand.jpg);
+  background-size: cover;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden; }
+
+.box-data-tech .difuminate-tech {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 124, 255, 0.9); }
+
+#header-app {
+  width: 100%;
+  height: 64px;
+  background: #fff;
+  z-index: 50; }
+
 #home-page {
   height: auto;
   display: grid;
@@ -86,7 +133,7 @@ body {
   justify-content: space-between; }
 
 #home-page #side-nav-menu-controller {
-  height: 394px;
+  height: 448px;
   background: #fff;
   position: -webkit-sticky;
   position: sticky;
@@ -111,18 +158,79 @@ body {
   width: 100%;
   height: 54px;
   line-height: 54px;
-  padding: 0 16px; }
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 #home-page #side-nav-menu-controller ul li:first-of-type {
   background: #ddd;
   border-right: 5px solid #343a40; }
 
+#home-page #side-nav-menu-controller ul li .timeline::before {
+  content: url(../assets/icons/navigation/timeline.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
+#home-page #side-nav-menu-controller ul li .science::before {
+  content: url(../assets/icons/navigation/science.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
+#home-page #side-nav-menu-controller ul li .tech::before {
+  content: url(../assets/icons/navigation/tech.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
+#home-page #side-nav-menu-controller ul li .games::before {
+  content: url(../assets/icons/navigation/games.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
+#home-page #side-nav-menu-controller ul li .trend::before {
+  content: url(../assets/icons/navigation/trend.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
+#home-page #side-nav-menu-controller ul li .jobs::before {
+  content: url(../assets/icons/navigation/jobs.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
+#home-page #side-nav-menu-controller ul li .store::before {
+  content: url(../assets/icons/navigation/store.svg);
+  display: inline-block;
+  padding-right: 24px;
+  padding-top: 25%; }
+
 #home-page #content-timeline {
   height: 1400px;
   background: #fff; }
 
+#home-page #content-timeline .navigation-switcher {
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid var(--light); }
+
+#home-page #content-timeline .content {
+  width: 100%;
+  padding: 16px; }
+
 #home-page #side-view-content {
-  height: 600px;
+  height: auto; }
+
+#home-page #side-view-content #discord {
+  width: 100%;
+  height: 260px;
   background: #dc3545; }
 
 #subscription-stamp {
